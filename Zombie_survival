@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNKPZy2T8/4v/J3uPhjKBwS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/imadEddine6/Virtixel_games_projects/blob/main/Zombie_survival\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import time\n",
+        "import random\n",
+        "\n",
+        "def start_adventure():\n",
+        "    print(\"🧟 VIRTIXEL: ZOMBIE SURVIVAL 🧟\")\n",
+        "    time.sleep(1)\n",
+        "    print(\"\\nYou are standing on a dark highway. You hear groaning nearby.\")\n",
+        "\n",
+        "    supplies = [\"FASHLIGHT\", \"BANDAGE\"]\n",
+        "    print(f\"Your starting supplies: {supplies}\")\n",
+        "\n",
+        "    choice1 = input(\"\\nDo you want to hide in the GAS STATION or run to the WOODS? \").upper()\n",
+        "\n",
+        "    if \"GAS\" in choice1 or \"STATION\" in choice1:\n",
+        "        print(\"\\nYou sneak into the gas station. It's quiet...\")\n",
+        "        time.sleep(1.5)\n",
+        "        # Random chance element\n",
+        "        if random.choice([True, False]):\n",
+        "            print(\"🎁 Jackpot! You found a Shotgun and escaped the horde! YOU WIN!\")\n",
+        "        else:\n",
+        "            print(\"☠️ Oh no! A zombie was hiding behind the counter. Game Over!\")\n",
+        "\n",
+        "    elif \"WOODS\" in choice1 or \"RUN\" in choice1:\n",
+        "        print(\"\\nYou run into the dark woods and trip over a log.\")\n",
+        "        time.sleep(1.5)\n",
+        "        print(\"🌲 The groaning fades away. You are safe for now... YOU SURVIVED!\")\n",
+        "\n",
+        "    else:\n",
+        "        print(\"\\nYou froze in fear! The zombies caught you. Game Over!\")\n",
+        "\n",
+        "# Run the project\n",
+        "start_adventure()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1OCxqpXIjmrH",
+        "outputId": "5b79f582-ac1a-42e7-f2ee-95b940626274"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "🧟 VIRTIXEL: ZOMBIE SURVIVAL 🧟\n",
+            "\n",
+            "You are standing on a dark highway. You hear groaning nearby.\n",
+            "Your starting supplies: ['FASHLIGHT', 'BANDAGE']\n",
+            "\n",
+            "Do you want to hide in the GAS STATION or run to the WOODS? gas station\n",
+            "\n",
+            "You sneak into the gas station. It's quiet...\n",
+            "☠️ Oh no! A zombie was hiding behind the counter. Game Over!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
